@@ -77,4 +77,4 @@ export OF_USE_SYSTEM_FINGERPRINT="1"
 export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES="1"
 export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
 
-add_lunch_combo omni_m30sdd-eng
+add_lunch_combo omni_"$FDEVICE"-eng
