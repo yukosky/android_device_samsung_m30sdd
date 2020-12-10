@@ -14,17 +14,16 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := m30sdd
-
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, build/target/product/embedded.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m30sdd
 PRODUCT_NAME := omni_m30sdd
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Galaxy M30s
+PRODUCT_MODEL := Samsung Galaxy M30s
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_RELEASE_NAME := Samsung Galaxy M30s
+
+ 
