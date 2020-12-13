@@ -16,7 +16,7 @@
 
 # Cache and ETC Points
 /cache              ext4    /dev/block/platform/13520000.ufs/by-name/cache         flags=display="Cache";backup=1;wipeingui
-/data               ext4    /dev/block/platform/13520000.ufs/by-name/userdata      
+/data               f2fs    /dev/block/platform/13520000.ufs/by-name/userdata      
 /efs                ext4    /dev/block/platform/13520000.ufs/by-name/efs           flags=display="EFS";backup=1
 
 # SDC and OTG Points
