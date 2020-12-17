@@ -1,4 +1,4 @@
-# Orange Fox Project for the Samsung Galaxy M30s
+# Samsung Galaxy M21s - PBRP 10.0
 
 ### How to build ###
 
@@ -7,19 +7,20 @@
 $ mkdir fox; cd fox
 
 # Init repo
-$ repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+$ repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-10.0
 
 # Clone m30sdd repo
-$ git clone https://github.com/yukosky/android_device_samsung_m30sdd -b fox-9.0 device/samsung/m30sdd
-$ mv device/samsung/m30sdd/build_ofox.sh . && chmod +x build_ofox.sh
+$ git clone https://github.com/yukosky/android_device_samsung_m30sdd -b pbrp-10 device/samsung/m30sdd
 
 # Sync
 $ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
 
+# Exports for avoid errors in build
+$ export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL=C
+
 # Build
-$ bash build_ofox.sh
+$ source build/envsetup.sh ; lunch omni_f41-eng ; mka recoveryimage
 ```
 
 ## Credits
-* Astrako: For build_ofox.sh file
 * Neel: For tree
